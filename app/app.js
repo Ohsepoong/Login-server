@@ -6,12 +6,12 @@ const PORT = 3000;
 
 
 // 서버세팅 : 화면분리 
-app.set("views", "./views");
+app.set("views", "./src/views");
 app.set("view engine", "ejs");
 
 
 // 라우팅 : 라우팅분리 .routes/home/index에 분리해 두고 접근한다.
-const home = require("./routes/home");
+const home = require("./src/routes/home");
 app.use("/", home);
 
 // 분리독립연동
