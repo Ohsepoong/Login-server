@@ -8,7 +8,7 @@ const PORT = 3000;
 // 서버세팅 : 화면분리 
 app.set("views", "./src/views");
 app.set("view engine", "ejs");
-
+app.use(express.static(`${__dirname}/src/public`))
 
 // 라우팅 : 라우팅분리 .routes/home/index에 분리해 두고 접근한다.
 const home = require("./src/routes/home");
