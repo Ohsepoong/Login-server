@@ -15,3 +15,5 @@
     ## 7. 새로운 서버실행명령과 package.json <- 일괄설치명령 npm init -y *** package-lock.json은 package.json의 상세파일이다.
    
     ## 8. 간편 서버실행명령의 설정 : package.json내부의 script{ "start": "node ./bin/www.js"}
+    ## 9. nodemon으로 서버실행 설정 : package.json내부의 script{ "start": "nodemon ./bin/www.js"}
+    ## 10. cd app -> npm start로 서버실행
