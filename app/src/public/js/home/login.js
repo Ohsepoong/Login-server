@@ -1,36 +1,40 @@
-"use strict";
+window.addEventListener("load", function() {
 
-const id = document.querySelector("#id");
-const pw = document.querySelector("#pw");
-const loginBtn = document.querySelector("button");
+    "use strict";
 
-loginBtn.addEventListener("click", login);
+    const id = document.querySelector("#id");
+    const pw = document.querySelector("#pw");
+    const loginBtn = document.querySelector("#btn");
 
-function login() {
-    const req = {
-        id : id.value,
-        pw : pw.value
-    };
+    loginBtn.addEventListener("click", login);
 
-    // 이 정보데이타를 서버로 전달하는 코드
-    fetch("/login", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(req),
-    })
-    .then(res => res.json())
-    .then((res) => {
-        if(res.success){
-            location.href = "/";
-        }
-        else 
-        {
-            alert(res.msg);
-        }
-    })
-    .catch((err) => {
-        console.error("로그인 중에 에러가 발생");
-    });
-}
+    function login() {
+        
+        const req = {
+            id : id.value,
+            pw : pw.value
+        };
+
+        // 이 정보데이타를 서버로 전달하는 코드
+        fetch("/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(req),
+        })
+        .then(res => res.json())
+        .then((res) => {
+            if(res.success){
+                location.href = "/";
+            }
+            else 
+            {
+                alert(res.msg);
+            }
+        })
+        .catch((err) => {
+            console.error("로그인 중에 에러가 발생");
+        });
+    }
+});
