@@ -23,7 +23,7 @@
         
         const express = require("express");
         const server = express();
-        server.listen(3000, callback);
+        server.listen(PORT, callback);
         
         node app.js -> Error: Cannot find module 'express' - npm install express -s -> node_modules & package-lock.json created 
         node app.js -> Cannot GET / -> add server.get("/", function) in app.js
