@@ -18,8 +18,15 @@
     ## 9. nodemon으로 서버실행 설정 : package.json내부의 script{ "start": "nodemon ./bin/www.js"}
     ## 10. cd app -> npm start로 서버실행
     
-    ### 1. create the file of app.js 
-            - npm install express -s -> node_modules & package-lock.json created automatically
+    ### 1. express로 서버실행해보기 
+        create the file of app.js : main file 
+        
+        const express = require("express");
+        const server = express();
+        server.listen(3000, callback);
+        
+        node app.js -> Error: Cannot find module 'express' - npm install express -s -> node_modules & package-lock.json created 
+        node app.js -> Cannot GET / -> add server.get("/", function) in app.js
     ### 2. create a view folder <- making module from HTML files
             view/home/index.ejs
             view/home/login.ejs
