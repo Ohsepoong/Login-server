@@ -1,6 +1,6 @@
 # Login-server/Back-end
 
-    ## 1. node app.js // app.js파일을 V8엔진으로 해석해달라는 요청과 같은 의미이다
+    ## 1. 백엔드실행 명령: node app.js // app.js파일을 V8엔진으로 해석해달라는 요청과 같은 의미이다
 
     ## 2. Error: Cannot find module 'express' -> npm install express --save 명령실행 -> node_modules폴더와 package-lock.js파일 자동생성되고 node_modules폴더 내부에  express모듈이 설치되어 있는 것을 확인할 수 있다.
 
